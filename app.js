@@ -2,7 +2,7 @@ console.log("Hello World!\n==========\n");
 
 // Exercise 1 Section
 console.log("EXERCISE 1:\n==========\n");
-for(let i = 0; i <=100; i++)  {
+for(let i = 1; i < 100; i++)  {
 
 
     if (i % 2 != 0 ){
@@ -14,7 +14,7 @@ for(let i = 0; i <=100; i++)  {
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
 
-for(let i = 0; i <=100; i++) {
+for(let i = 1; i <=100; i++) {
 
     if (i % 3 == 0 && i % 5 != 0){
         console.log(`FIZZ`);
@@ -105,18 +105,19 @@ do{
 
 let value = Math.round((Math.random() * 500)); // creates a random number between 0 and 500
 let n = Math.round(Math.random() * (500 - 100) + 100); // creates a random number between 100 and 500
-
+let found;
 for(let i = 0; i <=n; i++){
-    if(i = value) {
-        console.log('found value!')
+    if(i === value) {
+        console.log(`found value! Value was ${value}, checked up to n = ${n}`);
+        found = true;
         break;
-
     }
-    else{
-        console.log('did not found value')
+    }
+    if (!found) {
+        console.log(`did not found value. Value was ${value}, checked up to n = ${n}`);
     }
 
-}
+
 
    //Exercise 5 
    console.log("EXERCISE 5:\n==========\n");
@@ -125,20 +126,19 @@ for(let i = 0; i <=n; i++){
    let buzzDivisor = Math.round(Math.random() * (10 - 1) + 1);
    let s = Math.round(Math.random() * (1000 - 1) + 1);
    let start = Math.round(Math.random() * (10 - 1) + 1);
-   for(start; start<=s; start++){
-
-    if(start % fizzDivisor == 0 && start % buzzDivisor !=0 ){
+   
+   for(let i = start ; i<=s; i++){
+    if(i % fizzDivisor == 0 && i % buzzDivisor !=0 ){
         console.log("Fizz")
     }
-    if(start % buzzDivisor == 0 && start % fizzDivisor !=0){
+    if(i % buzzDivisor == 0 && i % fizzDivisor !=0){
         console.log('BUZZ')
     }
-    if( start % fizzDivisor == 0 && start % buzzDivisor ==0){
+    if( i % fizzDivisor == 0 && i % buzzDivisor ==0){
         console.log('FIZZBUZZ')
-    
     }
-    if(start % fizzDivisor !=0 && start % buzzDivisor !=0){
-        console.log(start)
+    if(i % fizzDivisor !=0 && i % buzzDivisor !=0){
+        console.log(i)
     }
    }
     
